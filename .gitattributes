@@ -1,3 +1,17 @@
-/gradlew text eol=lf
+# Normalize line endings for text files to avoid CRLF/LF conflicts
+* text=auto eol=lf
+
 *.bat text eol=crlf
+
+# Binary files
 *.jar binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+
+# Avoid noisy diffs/conflicts on generated lockfiles
+package-lock.json -diff linguist-generated
